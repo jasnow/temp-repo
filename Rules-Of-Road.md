@@ -1,4 +1,4 @@
-# ruby-advisory-db PR RULES OF THE ROAD
+# ruby-advisory-db PR Rules Of The Road
 
 * All non-content conventions will be put into 3 buckets ("choices",
   "preference", "requirements") with the default "choices".
@@ -17,7 +17,7 @@ Example for [E] (Use of comments and citations in .txt file => .yml file)
 
 A list of conventions follow:
 
-* CONTEXT: Supported order of fields
+## CONTEXT: Supported order of fields
  * PREFERENCE: README.md file's field order
  * CHOICES: CONTRIBUTING.md's field order, other file's field order
  * EXAMPLE(S): See these files for examples:
