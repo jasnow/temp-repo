@@ -1,6 +1,6 @@
 # ruby-advisory-db PR Rules Of The Road
 
-* All non-content conventions will be put into 3 buckets ("choices",
+## All non-content conventions will be put into 3 buckets ("choices",
   "preference", "requirements") with the default "choices".
   "preference" is the preferred item of the complete set of "choices".
   A "choice" becomes a requirement if it is:
@@ -29,12 +29,12 @@ A list of conventions follow:
 ```
 * AL>> Syn 2 files.
 
-# CONTEXT: Length of lines
+## CONTEXT: Length of lines
  * PREFERENCE: 80 characters
  * CHOICES: Any length (max found is 624 characters)
  * EXAMPLE(S): Many example below.
 
-# CONTEXT: Type of quote chacterss
+## CONTEXT: Type of quote chacterss
  * PREFERENCE: Double quotes    (785 lines ending with double quote)
  * CHOICES: Single quotes (425 lines ending with double quote)
  * EXAMPLE(S):
@@ -42,47 +42,47 @@ A list of conventions follow:
 - '>= 0.18.1'
 - ">= 12.25.0"
 ```
-# CONTEXT: Field: gem
+## CONTEXT: Field: gem
  * PREFERENCE: Probably covered by "spec" tests/no emebbbed spaces.
  * CHOICES: N/A
  * EXAMPLE(S): gem: unpoly-rails
 
-# CONTEXT: Field: engine
+## CONTEXT: Field: engine
  * PREFERENCE: Covered by "spec" tests (enumerated type: [ruby, rbx, jruby, mruby])
  * CHOICES: N/A
  * EXAMPLE(S): engine: ruby
 
-# CONTEXT: Field: library
+## CONTEXT: Field: library
  * PREFERENCE: Only known use is for "rubygems"
  * CHOICES: N/A
  * EXAMPLE(S): library: rubygems
 
-# CONTEXT: Field: framework
+## CONTEXT: Field: framework
  * PREFERENCE: Only known use is for "rails" gems
  * CHOICES: N/A
  * EXAMPLE(S): framework: rails
 
-# CONTEXT: Field: platform
+## CONTEXT: Field: platform
  * PREFERENCE: Only known use is for "jruby"
  * CHOICES: N/A
  * EXAMPLE(S): platform: jruby
 
-# CONTEXT: Field: cve
+## CONTEXT: Field: cve
  * PREFERENCE: Probably covered by "spec" tests/single value
  * CHOICES: N/A
  * EXAMPLE(S): cve: 2023-28846
 
-# CONTEXT: Field: osvdb
+## CONTEXT: Field: osvdb
  * PREFERENCE: Probably covered by "spec" tests/single value
  * CHOICES: N/A
  * EXAMPLE(S): osvdb: 12345
 
-# CONTEXT: Field: ghsa
+## CONTEXT: Field: ghsa
  * PREFERENCE: Probably covered by "spec" tests/single value
  * CHOICES: N/A
  * EXAMPLE(S): ghsa: m875-3xf6-mf78
 
-# CONTEXT: Field: url
+## CONTEXT: Field: url
  * PREFERENCE: Probably covered by "spec" tests/starts with "http"
  * CHOICES: N/A
  * EXAMPLE(S):
@@ -90,7 +90,7 @@ A list of conventions follow:
 url: https://github.com/unpoly/unpoly-rails/security/advisories/GHSA-m875-3xf6-mf78
 ```
 
-# CONTEXT: Field: title
+## CONTEXT: Field: title
  * PREFERENCE: single line (TBD: HOW MANY?)
  * CHOICES: multiple lines (TBD: HOW MANY?)
  * EXAMPLE(S):
@@ -100,12 +100,12 @@ title: Fat Free CRM Gem for Ruby allows remote attackers to inject or
   manipulate SQL queries
 ```
 
-# CONTEXT: Field: date
+## CONTEXT: Field: date
  * PREFERENCE: Probably covered by "spec" tests/single value
  * CHOICES: N/A
  * EXAMPLE(S): date: 2023-03-30
 
-# CONTEXT: Field: description
+## CONTEXT: Field: description
  * PREFERENCE: Use of "|" follow by text on next line (653 times)
  * CHOICES: Text starts on same line as "description: tag (102 times) 
  * EXAMPLE(S):
@@ -118,17 +118,17 @@ description: |
 description: backup-agoddard Gem for Ruby contains a flaw in /lib/backup/cli/utility.rb
 ```
 
-# CONTEXT: Field: cvss_v2
+## CONTEXT: Field: cvss_v2
  * PREFERENCE: Probably covered by "spec" tests/single value (high score 10.0)
  * CHOICES: N/A
  * EXAMPLE(S): cvss_v2: 7.0
 
-# CONTEXT: Field: cvss_v3
+## CONTEXT: Field: cvss_v3
  * PREFERENCE: Probably covered by "spec" tests/single value (high score 10.0)
  * CHOICES: N/A
  * EXAMPLE(S): cvss_v3: 5.9
 
-# CONTEXT: Field: patched_versions
+## CONTEXT: Field: patched_versions
  * PREFERENCE: List of version numbers prefixed by "~>", last one by ">"
  * CHOICES: single quotes, double quotes, no quotes around patched_Versions
  * EXAMPLE(S): patched_versions
@@ -144,7 +144,7 @@ description: backup-agoddard Gem for Ruby contains a flaw in /lib/backup/cli/uti
   - ">= 3.2.11"
 ```
 
-# CONTEXT: Field: unaffected_versions
+## CONTEXT: Field: unaffected_versions
  * PREFERENCE: List of version numbers prefixed by "~>", last one by ">"
  * CHOICES: single quotes, double quotes, no quotes around patched_Versions
  * EXAMPLE(S): unaffected_versions
@@ -156,7 +156,7 @@ description: backup-agoddard Gem for Ruby contains a flaw in /lib/backup/cli/uti
 - '>= 2.0.6'
 ```
 
-# CONTEXT: Field: related:, [cve:, ghsa:, osvdb:, url:]
+## CONTEXT: Field: related:, [cve:, ghsa:, osvdb:, url:]
  * PREFERENCE: List of references, Same rules as assocated field type. 
  * CHOICES: N/A
  * EXAMPLE(S):
@@ -173,7 +173,7 @@ related:
     - https://github.com/rubysec/ruby-advisory-db/issues/123457
 ```
 
-# CONTEXT: Field: notes
+## CONTEXT: Field: notes
  * PREFERENCE: Assume same rules as "description:" field.
  * CHOICES: N/A
  * EXAMPLE(S):
