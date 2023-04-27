@@ -2,10 +2,8 @@
 
 * All non-content conventions will be put into 3 buckets ("choices",
   "preference", "requirements") with the default "choices".
-
-"preference" is the preferred item of the complete set of "choices".
-
-A "choice" becomes a requirement if it is:
+  "preference" is the preferred item of the complete set of "choices".
+  A "choice" becomes a requirement if it is:
 
  * [A] checked by "spec" test,
  * [B] flagged by local yamllint run (ingoring line length),
@@ -13,15 +11,16 @@ A "choice" becomes a requirement if it is:
  * [D] not already present and supported in repo, or
  * [E] can be easily corrected by local script.
 
-Example for [C] (Use of double quotes around patched_versions)
+Example for [C] (Use of double quotes around patched_versions).
+
 Example for [E] (Use of comments and citations in .txt file => .yml file)
 
-A list of conventions follow
+A list of conventions follow:
 
 * CONTEXT: Supported order of fields
-PREFERENCE: README.md file's field order
-CHOICES: CONTRIBUTING.md's field order, other file's field order
-EXAMPLE(S): See these files for examples:
+ * PREFERENCE: README.md file's field order
+ * CHOICES: CONTRIBUTING.md's field order, other file's field order
+ * EXAMPLE(S): See these files for examples:
 ```
  * https://github.com/jasnow/ruby-advisory-db/blob/master/README.md
    -- GE, L, F, P, C, O, GH, U, T, DA, DE, C2, C3, U, P, R, N 
@@ -31,82 +30,85 @@ EXAMPLE(S): See these files for examples:
 * AL>> Syn 2 files.
 
 * CONTEXT: Length of lines
-PREFERENCE: 80 characters
-CHOICES: Any length (max found is 624 characters)
-EXAMPLE(S): Many example below.
+ * PREFERENCE: 80 characters
+ * CHOICES: Any length (max found is 624 characters)
+ * EXAMPLE(S): Many example below.
 
 * CONTEXT: Type of quote chacterss
-PREFERENCE: Double quotes    (785 lines ending with double quote)
-CHOICES: Single quotes (425 lines ending with double quote)
-EXAMPLE(S):
+ * PREFERENCE: Double quotes    (785 lines ending with double quote)
+ * CHOICES: Single quotes (425 lines ending with double quote)
+ * EXAMPLE(S):
 ```
 - '>= 0.18.1'
 - ">= 12.25.0"
 ```
 * CONTEXT: Field: gem
-PREFERENCE: Probably covered by "spec" tests/no emebbbed spaces.
-CHOICES: N/A
-EXAMPLE(S): gem: unpoly-rails
+ * PREFERENCE: Probably covered by "spec" tests/no emebbbed spaces.
+ * CHOICES: N/A
+ * EXAMPLE(S): gem: unpoly-rails
 
 * CONTEXT: Field: engine
-PREFERENCE: Covered by "spec" tests (enumerated type: [ruby, rbx, jruby, mruby])
-CHOICES: N/A
-EXAMPLE(S): engine: ruby
+ * PREFERENCE: Covered by "spec" tests (enumerated type: [ruby, rbx, jruby, mruby])
+ * CHOICES: N/A
+ * EXAMPLE(S): engine: ruby
 
 * CONTEXT: Field: library
-PREFERENCE: Only known use is for "rubygems"
-CHOICES: N/A
-EXAMPLE(S): library: rubygems
+ * PREFERENCE: Only known use is for "rubygems"
+ * CHOICES: N/A
+ * EXAMPLE(S): library: rubygems
 
 * CONTEXT: Field: framework
-PREFERENCE: Only known use is for "rails" gems
-CHOICES: N/A
-EXAMPLE(S): framework: rails
+ * PREFERENCE: Only known use is for "rails" gems
+ * CHOICES: N/A
+ * EXAMPLE(S): framework: rails
 
 * CONTEXT: Field: platform
-PREFERENCE: Only known use is for "jruby"
-CHOICES: N/A
-EXAMPLE(S): platform: jruby
+ * PREFERENCE: Only known use is for "jruby"
+ * CHOICES: N/A
+ * EXAMPLE(S): platform: jruby
 
 * CONTEXT: Field: cve
-PREFERENCE: Probably covered by "spec" tests/single value
-CHOICES: N/A
-EXAMPLE(S): cve: 2023-28846
+ * PREFERENCE: Probably covered by "spec" tests/single value
+ * CHOICES: N/A
+ * EXAMPLE(S): cve: 2023-28846
 
 * CONTEXT: Field: osvdb
-PREFERENCE: Probably covered by "spec" tests/single value
-CHOICES: N/A
-EXAMPLE(S): osvdb: 12345
+ * PREFERENCE: Probably covered by "spec" tests/single value
+ * CHOICES: N/A
+ * EXAMPLE(S): osvdb: 12345
 
 * CONTEXT: Field: ghsa
-PREFERENCE: Probably covered by "spec" tests/single value
-CHOICES: N/A
-EXAMPLE(S): ghsa: m875-3xf6-mf78
+ * PREFERENCE: Probably covered by "spec" tests/single value
+ * CHOICES: N/A
+ * EXAMPLE(S): ghsa: m875-3xf6-mf78
 
 * CONTEXT: Field: url
-PREFERENCE: Probably covered by "spec" tests/starts with "http"
-CHOICES: N/A
-EXAMPLE(S):
+ * PREFERENCE: Probably covered by "spec" tests/starts with "http"
+ * CHOICES: N/A
+ * EXAMPLE(S):
+```
 url: https://github.com/unpoly/unpoly-rails/security/advisories/GHSA-m875-3xf6-mf78
+```
 
 * CONTEXT: Field: title
-PREFERENCE: single line (TBD: HOW MANY?)
-CHOICES: multiple lines (TBD: HOW MANY?)
-EXAMPLE(S):
+ * PREFERENCE: single line (TBD: HOW MANY?)
+ * CHOICES: multiple lines (TBD: HOW MANY?)
+ * EXAMPLE(S):
 ```
 title: unpoly-rails Denial of Service vulnerability
 title: Fat Free CRM Gem for Ruby allows remote attackers to inject or
   manipulate SQL queries
 ```
+
 * CONTEXT: Field: date
-PREFERENCE: Probably covered by "spec" tests/single value
-CHOICES: N/A
-EXAMPLE(S): date: 2023-03-30
+ * PREFERENCE: Probably covered by "spec" tests/single value
+ * CHOICES: N/A
+ * EXAMPLE(S): date: 2023-03-30
 
 * CONTEXT: Field: description
-PREFERENCE: Use of "|" follow by text on next line (653 times)
-CHOICES: Text starts on same line as "description: tag (102 times) 
-EXAMPLE(S):
+ * PREFERENCE: Use of "|" follow by text on next line (653 times)
+ * CHOICES: Text starts on same line as "description: tag (102 times) 
+ * EXAMPLE(S):
 ```
 description: |
   Gem that implements the [Unpoly server protocol](https://unpoly.com/up.protocol)
@@ -116,19 +118,19 @@ description: |
 description: backup-agoddard Gem for Ruby contains a flaw in /lib/backup/cli/utility.rb
 ```
 * CONTEXT: Field: cvss_v2
-PREFERENCE: Probably covered by "spec" tests/single value (high score 10.0)
-CHOICES: N/A
-EXAMPLE(S): cvss_v2: 7.0
+ * PREFERENCE: Probably covered by "spec" tests/single value (high score 10.0)
+ * CHOICES: N/A
+ * EXAMPLE(S): cvss_v2: 7.0
 
 * CONTEXT: Field: cvss_v3
-PREFERENCE: Probably covered by "spec" tests/single value (high score 10.0)
-CHOICES: N/A
-EXAMPLE(S): cvss_v3: 5.9
+ * PREFERENCE: Probably covered by "spec" tests/single value (high score 10.0)
+ * CHOICES: N/A
+ * EXAMPLE(S): cvss_v3: 5.9
 
 * CONTEXT: Field: patched_versions
-PREFERENCE: List of version numbers prefixed by "~>", last one by ">"
-CHOICES: single quotes, double quotes, no quotes around patched_Versions
-EXAMPLE(S): patched_versions
+ * PREFERENCE: List of version numbers prefixed by "~>", last one by ">"
+ * CHOICES: single quotes, double quotes, no quotes around patched_Versions
+ * EXAMPLE(S): patched_versions
 ```
   - ~> 2.3.15
   - '~> 3.0.19'
@@ -142,9 +144,9 @@ EXAMPLE(S): patched_versions
 ```
 
 * CONTEXT: Field: unaffected_versions
-PREFERENCE: List of version numbers prefixed by "~>", last one by ">"
-CHOICES: single quotes, double quotes, no quotes around patched_Versions
-EXAMPLE(S): unaffected_versions
+ * PREFERENCE: List of version numbers prefixed by "~>", last one by ">"
+ * CHOICES: single quotes, double quotes, no quotes around patched_Versions
+ * EXAMPLE(S): unaffected_versions
 ```
 - ">= 1.9.3"
 - '< 2.3.0'
@@ -154,9 +156,9 @@ EXAMPLE(S): unaffected_versions
 ```
 
 * CONTEXT: Field: related:, [cve:, ghsa:, osvdb:, url:]
-PREFERENCE: List of references, Same rules as assocated field type. 
-CHOICES: N/A
-EXAMPLE(S):
+ * PREFERENCE: List of references, Same rules as assocated field type. 
+ * CHOICES: N/A
+ * EXAMPLE(S):
 ```
 related:
   cve:
@@ -171,9 +173,9 @@ related:
 ```
 
 * CONTEXT: Field: notes
-PREFERENCE: Assume same rules as "description:" field.
-CHOICES: N/A
-EXAMPLE(S):
+ * PREFERENCE: Assume same rules as "description:" field.
+ * CHOICES: N/A
+ * EXAMPLE(S):
 ```
 notes: "'~> 3.2.22.2' is found in gems/actionpack/CVE-2016-2097.yml"
 notes: Newer versions are affected, but tracked in the actionview gem.
