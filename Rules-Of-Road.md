@@ -22,7 +22,7 @@ A list of conventions follow:
  * https://github.com/jasnow/ruby-advisory-db/blob/master/CONTRIBUTING.md
    -- GE,    F, P, C, O, GH, U, T, DA, DE, C2, C3, U, P, R
 ```
-* AL>> Syn 2 files.
+# AL>> Syn 2 files.
 
 ## CONTEXT: Length of lines
  * PREFERENCE: 80 characters
@@ -86,8 +86,8 @@ url: https://github.com/unpoly/unpoly-rails/security/advisories/GHSA-m875-3xf6-m
 ```
 
 ## CONTEXT: Field: title
- * PREFERENCE: single line (TBD: HOW MANY?)
- * CHOICES: multiple lines (TBD: HOW MANY?)
+ * PREFERENCE: single line
+ * CHOICES: multiple lines
  * EXAMPLE(S):
 ```
 title: unpoly-rails Denial of Service vulnerability
@@ -126,8 +126,9 @@ description: backup-agoddard Gem for Ruby contains a flaw in /lib/backup/cli/uti
 ## CONTEXT: Field: patched_versions
  * PREFERENCE: List of version numbers prefixed by "~>", last one by ">"
  * CHOICES: single quotes, double quotes, no quotes around patched_Versions
- * EXAMPLE(S): patched_versions
+ * EXAMPLE(S):
 ```
+patched_versions
   - ~> 2.3.15
   - '~> 3.0.19'
   - "~> 3.1.10"
@@ -142,8 +143,9 @@ description: backup-agoddard Gem for Ruby contains a flaw in /lib/backup/cli/uti
 ## CONTEXT: Field: unaffected_versions
  * PREFERENCE: List of version numbers prefixed by "~>", last one by ">"
  * CHOICES: single quotes, double quotes, no quotes around patched_Versions
- * EXAMPLE(S): unaffected_versions
+ * EXAMPLE(S):
 ```
+ unaffected_versions
 - ">= 1.9.3"
 - '< 2.3.0'
 - '>= 2.0.0.195'
@@ -171,7 +173,7 @@ related:
 ## CONTEXT: Field: notes
  * PREFERENCE: Assume same rules as "description:" field.
  * CHOICES: N/A
- * EXAMPLE(S):
+ * EXAMPLE(S): (real examples)
 ```
 notes: "'~> 3.2.22.2' is found in gems/actionpack/CVE-2016-2097.yml"
 notes: Newer versions are affected, but tracked in the actionview gem.
