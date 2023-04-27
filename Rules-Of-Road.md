@@ -1,19 +1,14 @@
 # ruby-advisory-db PR Rules Of The Road
 
-## All non-content conventions will be put into 3 buckets ("choices",
-  "preference", "requirements") with the default "choices".
-  "preference" is the preferred item of the complete set of "choices".
-  A "choice" becomes a requirement if it is:
+All non-content conventions will be put into 3 buckets ("choices", "preference", "requirements") with the default "choices". "preference" is the preferred item of the complete set of "choices". A "choice" becomes a requirement if it is:
 
  * [A] checked by "spec" test,
- * [B] flagged by local yamllint run (ingoring line length),
+ * [B] flagged by local yamllint run (ignoring line length),
  * [C] created by github_advisory_sync.rb script,
  * [D] not already present and supported in repo, or
  * [E] can be easily corrected by local script.
-
-Example for [C] (Use of double quotes around patched_versions).
-
-Example for [E] (Use of comments and citations in .txt file => .yml file)
+   * Example for [C] (Use of double quotes around patched_versions).
+   * Example for [E] (Use of comments and citations in .txt file => .yml file)
 
 A list of conventions follow:
 
@@ -34,7 +29,7 @@ A list of conventions follow:
  * CHOICES: Any length (max found is 624 characters)
  * EXAMPLE(S): Many example below.
 
-## CONTEXT: Type of quote chacterss
+## CONTEXT: Type of quote characters
  * PREFERENCE: Double quotes    (785 lines ending with double quote)
  * CHOICES: Single quotes (425 lines ending with double quote)
  * EXAMPLE(S):
@@ -43,7 +38,7 @@ A list of conventions follow:
 - ">= 12.25.0"
 ```
 ## CONTEXT: Field: gem
- * PREFERENCE: Probably covered by "spec" tests/no emebbbed spaces.
+ * PREFERENCE: Probably covered by "spec" tests/no embedded spaces.
  * CHOICES: N/A
  * EXAMPLE(S): gem: unpoly-rails
 
@@ -157,7 +152,7 @@ description: backup-agoddard Gem for Ruby contains a flaw in /lib/backup/cli/uti
 ```
 
 ## CONTEXT: Field: related:, [cve:, ghsa:, osvdb:, url:]
- * PREFERENCE: List of references, Same rules as assocated field type. 
+ * PREFERENCE: List of references, Same rules as associated field type. 
  * CHOICES: N/A
  * EXAMPLE(S):
 ```
