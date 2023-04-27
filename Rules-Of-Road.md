@@ -3,14 +3,14 @@
 All non-content conventions will be put into 3 buckets ("choices", "preference", "requirements") with the default **choices**. **preference** is the preferred item of the complete set of "choices". A "choice" becomes a **requirement** (should be fixed) if it is:
 
  * [A] checked by "spec" test,
- * [B] flagged by local yamllint run (ignoring line length),
- * [C] created by github_advisory_sync.rb script,
+ * [B] flagged by local **yamllint** run (ignoring line length warnings),
+ * [C] created by **github_advisory_sync.rb** script,
  * [D] not already present and supported in repo, or
  * [E] can be easily corrected by local script.
    * Example for [C] (Use of double quotes around patched_versions).
-   * Example for [E] (Use of comments and citations in .txt file => .yml file)
+   * Example for [E] (Use of comments and citations in .txt file => .yml file).
 
-A list of conventions follow:
+A current list of conventions follows:
 
 ## CONTEXT: Supported order of fields
  * PREFERENCE: README.md file's field order
