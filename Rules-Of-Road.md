@@ -1,6 +1,6 @@
 # ruby-advisory-db PR Rules Of The Road
 
-All non-content conventions will be put into 3 buckets ("choices", "preference", "requirements") with the default "choices". "preference" is the preferred item of the complete set of "choices". A "choice" becomes a requirement if it is:
+All non-content conventions will be put into 3 buckets ("choices", "preference", "requirements") with the default **choices**. **preference** is the preferred item of the complete set of "choices". A "choice" becomes a **requirement** (should be fixed) if it is:
 
  * [A] checked by "spec" test,
  * [B] flagged by local yamllint run (ignoring line length),
