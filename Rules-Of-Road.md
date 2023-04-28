@@ -86,13 +86,16 @@ url: https://github.com/unpoly/unpoly-rails/security/advisories/GHSA-m875-3xf6-m
 ```
 
 ## CONTEXT: Field: title
- * PREFERENCE: single line
- * CHOICES: multiple lines
- * EXAMPLE(S):
+ * PREFERENCE: single line (no special chars, such as "|" or ">" after "title:") 
+ * CHOICES: N/A
+ * EXAMPLE(S): (check by "spec" tests)
 ```
 title: unpoly-rails Denial of Service vulnerability
 title: Fat Free CRM Gem for Ruby allows remote attackers to inject or
   manipulate SQL queries
+title:
+  Fat Free CRM Gem for Ruby allows remote attackers 
+  to inject or manipulate SQL queries
 ```
 
 ## CONTEXT: Field: date
