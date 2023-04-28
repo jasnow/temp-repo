@@ -3,14 +3,13 @@
 All non-content conventions will be put into 3 buckets ("choices", "preference", "requirements") with the default **choices**. **preference** is the preferred item of the complete set of "choices". A "choice" becomes a **requirement** (should be fixed) if it is:
 
  * [A] checked by "spec" test,
- * [B] created by **github_advisory_sync.rb** script,
+ * [B] created by **github_advisory_sync.rb** or similar importing scripts,
    * Example for [B] (Use of double quotes around patched_versions).
  * [C] not already present and supported in repo, or
  * [D] can be easily checked by local scripts,
    * Example of [D] (Use of local **yamllint** run - ignoring line-length warnings),
  * [E] can be easily corrected by local script(s).
-   * Example for [E] (Use of comments and citations in .txt file => .yml file).
-
+   * Example for [E] (Use of comments and citations in .txt file => .yml file: txt2yml).
 
 A current list of conventions follows:
 
@@ -24,7 +23,6 @@ A current list of conventions follows:
  * https://github.com/jasnow/ruby-advisory-db/blob/master/CONTRIBUTING.md
    -- GE,    F, P, C, O, GH, U, T, DA, DE, C2, C3, U, P, R
 ```
-# AL>> Syn 2 files.
 
 ## CONTEXT: Length of lines
  * PREFERENCE: 80 characters
@@ -104,15 +102,22 @@ title: Fat Free CRM Gem for Ruby allows remote attackers to inject or
 
 ## CONTEXT: Field: description
  * PREFERENCE: Use of "|" follow by text on next line (653 times)
+   * description paragraph delimiter is a blank line.
  * CHOICES: Text starts on same line as "description: tag (102 times) 
  * EXAMPLE(S):
 ```
-description: |
+description: |    ## (595 times)
   Gem that implements the [Unpoly server protocol](https://unpoly.com/up.protocol)
   checks](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-health-check.
   The [unpoly-rails](https://github.com/unpoly/unpoly-rails/) gem echoes
   the request URL
 description: backup-agoddard Gem for Ruby contains a flaw in /lib/backup/cli/utility.rb
+.
+Also:
+     51 description: |-
+      4 description: |+
+      3 description: |2
+      1 description: |2-
 ```
 
 ## CONTEXT: Field: cvss_v2
@@ -155,7 +160,7 @@ patched_versions
 - '>= 2.0.6'
 ```
 
-## CONTEXT: Field: related:, [cve:, ghsa:, osvdb:, url:]
+## CONTEXT: Field: related:, SubFields: [cve:, ghsa:, osvdb:, url:]
  * PREFERENCE: List of references, Same rules as associated field type. 
  * CHOICES: N/A
  * EXAMPLE(S):
