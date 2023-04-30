@@ -136,6 +136,17 @@ Also:
 ## CONTEXT: Field: patched_versions
  * PREFERENCE: List of version numbers prefixed by "~>", last one by ">"
  * CHOICES: single quotes, double quotes, no quotes around patched_Versions
+ * SPECIAL NOTE: Use "-rc" over ".rc"." 
+```
+   * For Mruby: Postmodern reminds me: [That's a good question. 
+     bundler-audit can't really check for mrubybecause mruby isn't
+     used with bundler, since it's supposed to be compiled into other
+     projects. I checked how they define the version constant, and it
+     doesn't look like rc is even included into the version. I would
+     use the git tag version 3.2.0-rc since that's probably how projects
+     download/target the mruby version.
+     * https://github.com/mruby/mruby/blob/3.2.0-rc/include/mruby/version.h#L60]
+```
  * EXAMPLE(S):
 ```
 patched_versions
