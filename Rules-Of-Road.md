@@ -106,6 +106,7 @@ title:
 ## CONTEXT: Field: description
  * PREFERENCE: Use of "|" follow by text on next line (653 times)
    * description paragraph delimiter is a blank line.
+ * SPECIAL NOTE: No need to use single quotes around the text block.
  * CHOICES: Text starts on same line as "description: tag (102 times) 
  * EXAMPLE(S):
 ```
@@ -193,6 +194,7 @@ related:
 
 ## CONTEXT: Field: notes
  * PREFERENCE: Assume same rules as "description:" field.
+ * SPECIAL NOTE: Make the sentence human-readable.
  * CHOICES: N/A
  * EXAMPLE(S): (real examples)
 ```
