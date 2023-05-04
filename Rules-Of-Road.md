@@ -178,6 +178,7 @@ patched_versions
 ## CONTEXT: Field: related:, SubFields: [cve:, ghsa:, osvdb:, url:]
  * PREFERENCE: List of references, Same rules as associated field type. 
  * CHOICES: N/A
+ * SPECIAL NOTE: 5/3/2023: yamllint'ing change to enforce 2 blank chars beforoe "-".
  * EXAMPLE(S):
 ```
 related:
